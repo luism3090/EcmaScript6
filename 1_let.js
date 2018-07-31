@@ -134,53 +134,40 @@ console.log(v);
 
 
 
+console.log("----------------------------------------");
+
+// Hoisting
+
+// Variables defined with var are hoisted to the top. (Js Hoisting)
+
+// You can use a variable before it is declared:
 
 
 
+if(true)
+{
+	console.log(car);
+
+	var car = 'Volvo';
+
+	console.log(car);
+
+}
+
+console.log(car);
 
 
+if(true)
+{
+	// console.log(car2);  // Not Allowed
 
+	let car2 = 'Tesla';
 
+	console.log(car2);
 
+}
 
+// console.log(car2); // Not Allowed
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-// console.log("----------------------------------------");
-/*
-
-JavaScript const
-The const statement allows you to declare a constant (a JavaScript variable with a constant value).
-
-Constants are similar to let variables, except that the value cannot be changed.
-
-*/ 
-
-
-// var z = 0;
-
-// console.log(z);
-
-// {
-// 	const z = 10;
-
-// 	console.log(z);
-
-// 	//z = 20;  //the variable z has error
-
-// }
-
-// console.log(z);
 
 
