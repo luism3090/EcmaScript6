@@ -69,7 +69,9 @@ console.log("----------------------------------------");
 
 // Because of this, we cannot change constant primitive values, but whe can change the properties of constant objects.
 
+// Primitive Values
 
+// If we assign a primitive value to a constant, we cannot change the primitive value: 
 
 
 
