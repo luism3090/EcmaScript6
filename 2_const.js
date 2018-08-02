@@ -53,7 +53,7 @@ console.log("----------------------------------------");
 //console.log(PI2);
 
 
-const PI2 = 3.14159265359;
+const PI2 = 3.14159265359;   // Correct
 
 console.log(PI2);
 
@@ -69,29 +69,41 @@ console.log("----------------------------------------");
 
 // Because of this, we cannot change constant primitive values, but whe can change the properties of constant objects.
 
+
 // Primitive Values
 
 // If we assign a primitive value to a constant, we cannot change the primitive value: 
 
 
 
+const PI3 = 3.141592653589793;
+
+console.log(PI3)
+
+// PI3 = 3.14;      // This will give an error
+
+// PI3 = PI3 + 10;   // This will also give an error
+
+
+
 console.log("----------------------------------------");
 
-// Constant Objects
+// Constant Objects can Change
 
-// Declaring a constant object does NOT make the objects properties unchangeable:
+// You can change the properties of a constant object:
 
-// I can create a const object:
+
+// you can create a const object:
 
 const auto = {type:"Fiat", model:"500", color:"white" }
 console.log(auto);
 
-// I can change a property:
+// you can change a property:
 
 auto.color = "red";
 console.log(auto);
 
-// I can add a property:
+// you can add a property:
 
 auto.owner = "johnson";
 console.log(auto);
@@ -107,11 +119,9 @@ console.log(auto);
 
 console.log("----------------------------------------");
 
-// Constant Arrays
+// Constant Arrays can Change
 
-// Declaring a constant array does NOT make the array elements unchangeble:
-
-// I can create a constant array:
+// you can create a constant array:
 
 const cars = ['Saab','Volvo','BMW'];
 console.log(cars);
@@ -126,13 +136,22 @@ console.log(cars);
 cars.push("Tesla");
 console.log(cars);
 
-// But I cannot reassign it:
+// But you can NOT reassign a constant array:
 
-// var cars = ["Toyota", "Volvo", "Audi"];    //ERROR
+ const cars2 = ["Nissan", "Volvo", "Audi"];    
+ console.log(cars2);
+
+// cars2 = ["Nissan1", "Volvo1", "Audi1"];     // Error
 
 
 
 
+console.log("----------------------------------------");
+
+// Redeclaring or reassigning an existing var or let variable to const, in the same scope, or in the same block, is not allowed:
+
+
+var p = 2;
 
 
 
