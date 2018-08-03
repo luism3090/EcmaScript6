@@ -1,10 +1,95 @@
 
 // JavaScript let
 
-// The let statement allows you to declare a variable with block scope.
+// ES2015 introduced two important new JavaScript keywords: let and const.
+
+// These two keywords provide Block Scope variables (and constants) in JavaScript.
+
+// Before ES2015, JavaScript had only two types of scope: Global Scope and Function Scope. 
 
 
-// Redeclaring a variable using var can impose problems:
+// Global Scope
+
+// Variables declared Globally (outside any function) have Global Scope.
+
+
+var autoName = 'Volvo';
+
+console.log(autoName);  // code here can use carName
+
+
+function myFunction(){
+	console.log(autoName);	// code here can also use carName 
+};
+myFunction();
+
+// Global variables can be accessed from anywhere in a JavaScript program.
+
+
+
+console.log("----------------------------------------");
+
+// Function Scope
+
+// Variables declared Locally (inside a function) have Function Scope.
+
+
+// console.log(autoName2);	  // code here can NOT use autoName2
+
+function myFunction2(){
+	var autoName2 = 'Volvoin';
+	console.log(autoName2);	 // code here CAN use carName
+}
+myFunction2();
+
+// console.log(autoName2);	  // code here can NOT use carName
+
+
+// Local variables can only be accessed from inside the function where they are declared.
+
+
+
+console.log("----------------------------------------");
+
+// JavaScript Block Scope
+
+// Variables declared with the var keyword can not have Block Scope.
+
+// Variables declared inside a block {} can be accessed from outside the block.
+
+
+{
+	var e= 2;
+
+	console.log(e);
+}
+
+console.log(e); // x CAN be used here
+
+// Before ES2015 JavaScript did not have Block Scope.
+
+// Variables declared with the let keyword can have Block Scope.
+
+// Variables declared inside a block {} can not be accessed from outside the block:
+
+
+{ 
+    let j = 10;
+    console.log(j);
+}
+
+// console.log(j); // j can NOT be used here
+
+
+
+
+console.log("----------------------------------------");
+
+// Redeclaring Variables
+
+// Redeclaring a variable using the var keyword can impose problems.
+
+// Redeclaring a variable inside a block will also redeclare the variable outside the block:
 
 var x = 10;
 
@@ -21,7 +106,9 @@ console.log(x);
 
 console.log("----------------------------------------");
 
-// Redeclaring a variable using let can solve the problems:
+// Redeclaring a variable using the let keyword can solve this problem.
+
+// Redeclaring a variable inside a block will not redeclare the variable outside the block:
 
 
 var y = 10;
@@ -29,7 +116,7 @@ var y = 10;
 console.log(y);
 
 {
-	let y = 20;
+	let y = 2;
 	console.log(y);
 }
 
@@ -54,6 +141,7 @@ for(var i = 0; i <= 10; i++)
 console.log(i);
 
 
+
 // Using let in a loop:
 
 let a = 5;
@@ -65,7 +153,50 @@ for(let a = 0; a <= 10 ; a ++)
 
 console.log(a);
 
+// In the first example, using var, the variable declared in the loop redeclares the variable outside the loop.
 
+// In the second example, using let, the variable declared in the loop does not redeclare the variable outside the loop.
+
+// When let is used to declare the i variable in a loop, the i variable will only be visible within the loop.
+
+
+
+console.log("----------------------------------------");
+
+// Function Scope
+
+// Variables declared with var and let are quite similar when declared inside a function.
+
+// They will both have Function Scope:
+
+function myFunctionn1() {
+    var carNamee = "Volvo";   // Function Scope
+
+    console.log(carNamee);
+}
+myFunctionn1();
+
+function myFunctionn2() {
+    let carNamee = "Volvo";   // Function Scope
+    console.log(carNamee);
+}
+myFunctionn2();
+
+
+
+// Global Scope
+
+// Variables declared with var and let are quite similar when declared outside a block.
+
+// They will both have Global Scope:
+
+var xx = 2;       // Global scope   
+
+let xx = 2;       // Global scope   // Not Allowed
+
+
+
+/*
 
 console.log("----------------------------------------");
 
@@ -170,4 +301,4 @@ if(true)
 // console.log(car2); // Not Allowed
 
 
-
+*/

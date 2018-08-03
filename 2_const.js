@@ -148,10 +148,93 @@ console.log(cars);
 
 console.log("----------------------------------------");
 
+// Redeclaring
+
 // Redeclaring or reassigning an existing var or let variable to const, in the same scope, or in the same block, is not allowed:
 
 
-var p = 2;
+var p = 2;  // Allowed
+// const p = 2 ;  // Not allowed
+
+console.log(p);
+
+{
+	let p = 2;  // Allowed
+	// const p = 2; // Not allowed
+
+	console.log(p);
+
+}
+
+
+
+console.log("----------------------------------------");
+
+
+// Redeclaring or reassigning an existing const variable, in the same scope, or in the same block, is not allowed:
+
+
+const f = 6;       // Allowed
+// const f = 3;       // Not allowed
+// f = 3;             // Not allowed
+// var f = 3;         // Not allowed
+// let f = 3;         // Not allowed
+
+console.log(f);
+
+{
+    const f = 10;   // Allowed
+    // const f = 3;   // Not allowed
+    // f = 3;         // Not allowed
+    // var f = 3;     // Not allowed
+    // let f = 3;     // Not allowed
+    console.log(f);
+}
+
+
+
+console.log("----------------------------------------");
+
+// Redeclaring a variable with const, in another scope, or in another block, is allowed:
+
+
+const r = 5; 
+
+console.log(r);
+
+{
+	const r = 10;
+	console.log(r);
+}
+
+{
+	const r = 20;
+	console.log(r);	
+}
+
+
+
+console.log("----------------------------------------");
+
+// Hoisting
+
+// Variables defined with const are not hoisted to the top.
+
+// A const variable is cannot be used before it is declared
+
+
+// autoName = 'Volvo';   // you can not use autoName here
+
+const autoName = 'Volvo';
+
+console.log(autoName);	
+
+
+
+
+
+
+
 
 
 
