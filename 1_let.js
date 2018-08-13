@@ -1,11 +1,10 @@
-
 // JavaScript let
 
 // ES2015 introduced two important new JavaScript keywords: let and const.
 
 // These two keywords provide Block Scope variables (and constants) in JavaScript.
 
-// Before ES2015, JavaScript had only two types of scope: Global Scope and Function Scope. 
+// Before ES2015, JavaScript had only two types of scope: Global Scope and Function Scope.
 
 
 // Global Scope
@@ -15,11 +14,11 @@
 
 var autoName = 'Volvo';
 
-console.log(autoName);  // code here can use carName
+console.log(autoName); // code here can use carName
 
 
-function myFunction(){
-	console.log(autoName);	// code here can also use carName 
+function myFunction() {
+  console.log(autoName); // code here can also use carName
 };
 myFunction();
 
@@ -33,12 +32,11 @@ console.log("----------------------------------------");
 
 // Variables declared Locally (inside a function) have Function Scope.
 
+// console.log(autoName2); // code here can NOT use autoName2
 
-// console.log(autoName2);	  // code here can NOT use autoName2
-
-function myFunction2(){
-	var autoName2 = 'Volvoin';
-	console.log(autoName2);	 // code here CAN use carName
+function myFunction2() {
+  var autoName2 = 'Volvoin';
+  console.log(autoName2); // code here CAN use carName
 }
 myFunction2();
 
@@ -57,11 +55,10 @@ console.log("----------------------------------------");
 
 // Variables declared inside a block {} can be accessed from outside the block.
 
-
 {
-	var e= 2;
+  var e = 50;
 
-	console.log(e);
+  console.log(e);
 }
 
 console.log(e); // x CAN be used here
@@ -73,9 +70,9 @@ console.log(e); // x CAN be used here
 // Variables declared inside a block {} can not be accessed from outside the block:
 
 
-{ 
-    let j = 10;
-    console.log(j);
+{
+  let j = 10;
+  console.log(j);
 }
 
 // console.log(j); // j can NOT be used here
@@ -95,10 +92,10 @@ var x = 10;
 
 console.log(x);
 
-{ 
-    var x = 2;
+{
+  var x = 20;
 
-    console.log(x);
+  console.log(x);
 }
 console.log(x);
 
@@ -116,8 +113,11 @@ var y = 10;
 console.log(y);
 
 {
-	let y = 2;
-	console.log(y);
+  let y = 2;
+  console.log(y);
+
+  y = 18;
+  console.log(y);
 }
 
 console.log(y);
@@ -133,8 +133,7 @@ console.log("----------------------------------------");
 
 var i = 5;
 
-for(var i = 0; i <= 10; i++)
-{
+for (var i = 0; i <= 10; i++) {
 
 }
 
@@ -146,8 +145,7 @@ console.log(i);
 
 let a = 5;
 
-for(let a = 0; a <= 10 ; a ++)
-{
+for (let a = 0; a <= 10; a++) {
 
 }
 
@@ -170,19 +168,20 @@ console.log("----------------------------------------");
 // They will both have Function Scope:
 
 function myFunctionn1() {
-    var carNamee = "Volvo";   // Function Scope
+  var carNamee = "Volvo"; // Function Scope
 
-    console.log(carNamee);
+  console.log(carNamee);
 }
 myFunctionn1();
 
 function myFunctionn2() {
-    let carNamee = "Volvo";   // Function Scope
-    console.log(carNamee);
+  let carNamee = "Volvo"; // Function Scope
+  console.log(carNamee);
 }
 myFunctionn2();
 
 
+console.log("----------------------------------------");
 
 // Global Scope
 
@@ -190,13 +189,14 @@ myFunctionn2();
 
 // They will both have Global Scope:
 
-var xx = 2;       // Global scope   
+var k = 40; // Global scope
 
-let xx = 2;       // Global scope   // Not Allowed
+let u = 50; // Global scope
+
+console.log(k);
+console.log(k);
 
 
-
-/*
 
 console.log("----------------------------------------");
 
@@ -209,22 +209,18 @@ console.log("----------------------------------------");
 // Global variables defined with the var keyword belong to the window object:
 
 
-var carName1 = "Volvo";
+var carName1 = "BMW";
 
-// code here can use window.carName
+console.log(window.carName1); // code here can use window.carName
 
-console.log(window.carName1);
-
-
-let carName2 = "Volvo";
-
-// code here can not use window.carName
-
-console.log(window.carName2);
-
-console.log(carName2);
+console.log(carName1); // code here can use carName1
 
 
+let carName2 = "Ford";
+
+console.log(window.carName2); // code here can not use window.carName2
+
+console.log(carName2); // code here can use carName2
 
 
 
@@ -238,7 +234,7 @@ console.log("----------------------------------------");
 var q = 2;
 
 console.log(q);
- 
+
 var q = 3;
 
 console.log(q);
@@ -254,11 +250,11 @@ console.log(v);
 // let v = 3; // Not Allowed
 
 {
-	let v = 24; // Allowed
+  let v = 24; // Allowed
 
-	console.log(v);
+  console.log(v);
 
-	// let v = 5; // Not Allowed
+  // let v = 5; // Not Allowed
 }
 
 
@@ -273,32 +269,32 @@ console.log("----------------------------------------");
 
 // You can use a variable before it is declared:
 
+if (true) {
 
+  console.log(car);
 
-if(true)
-{
-	console.log(car);
+  var car = 'Volvo';
 
-	var car = 'Volvo';
-
-	console.log(car);
+  console.log(car);
 
 }
 
 console.log(car);
 
 
-if(true)
-{
-	// console.log(car2);  // Not Allowed
+if (true) {
 
-	let car2 = 'Tesla';
+  // console.log(car2);  // Not Allowed
 
-	console.log(car2);
+  let car2 = 'Tesla';
+
+  console.log(car2);
+
+  function carro() {
+    console.log(car2);
+  }
+  carro();
 
 }
 
 // console.log(car2); // Not Allowed
-
-
-*/
