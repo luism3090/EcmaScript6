@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>6_New_Number_Methods.html</title>
+     <script type="text/javascript">
+          // The Number.isInteger() Method
+
+          // The Number.isInteger() method returns true if the argument is an integer.
+
+          let result1 = Number.isInteger(20);
+          console.log(result1);
+
+          // The Number.isSafeInteger() Method
+
+          // A safe integer is an integer that can be exactly represented as a double precision number.
+          //
+          // The Number.isSafeInteger() method returns true if the argument is a safe integer.
+
+          let result2 = Number.isSafeInteger(10); // returns true
+          console.log(result2);
+          let result3 = Number.isSafeInteger(12345678901234567890); // returns false
+          console.log(result3);
+     </script>
+</head>
+
+<body>
+     <script src="http://localhost:35729/livereload.js"></script>
+</body>
+
+</html>

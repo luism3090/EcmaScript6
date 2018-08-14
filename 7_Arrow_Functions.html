@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>7_Arrow_Functions</title>
+     <script type="text/javascript">
+          // Arrow Functions
+          // ES5
+          let x = function(x, y) {
+               return x + y;
+          }
+          console.log(x(5, 10));
+
+          function sumatoria(x, y) {
+               return x + y;
+          }
+          console.log(sumatoria(3, 2));
+
+          // ES6
+
+          // Arrow functions allows a short syntax for writing function expressions.
+          //
+          // You don't need the function keyword, the return keyword, and the curly brackets.
+
+
+          // Arrow functions do not have their own this. They are not well suited for defining object methods.
+          //
+          // Arrow functions must be defined before they are used. Using const is safer than using var, because a function expression is a constant value.
+          //
+          // You can only omit the return keyword and the curly brackets if the function is a single statement.
+          //
+          // It might be a good habit to keep them:
+
+
+          const y = (x, y) => x + y;
+
+          console.log(y(10, 10));
+
+
+          const c = (x, y) => {
+               return x + y
+          };
+
+          console.log(c(50, 50));
+
+
+          //Función de un solo parámetro.
+
+          // Al crear una arrow function de un solo parámetro no es necesario escribír los paréntesis, tampoco es necesario escribír las llaves, esto se puede cuando la función es de una sola línea y devuelve un valor.
+
+
+          // ES5
+          let saludo1 = function(nombre) {
+               return 'Hola ' + nombre;
+          }
+          console.log(saludo1('Juan'));
+
+          // ES6
+
+          let saludo2 = nombre => `Hola ${nombre}`;
+
+          console.log(saludo2('Luis'));
+
+          //
+          //Función de varios parámetros.
+
+          // Cuando la función tenga más de un parámetro es necesario envolver el nombre de estos entre paréntesis.
+
+
+          // ES5
+
+          let sumar1 = function(a, b) {
+               return a + b;
+          }
+
+          console.log(sumar1(2, 3));
+
+          // ES6
+
+          let sumar2 = (a, b) => a + b;
+
+          console.log(sumar2(20, 20));
+
+          //
+          //Función sin parámetros.
+
+          // Cuando la función no reciba parámetros también son necesarios los paréntesis.
+          //
+
+          // ES5
+
+          let otroSaludo1 = function() {
+               return 'Hola a todos';
+          }
+
+          console.log(otroSaludo1());
+
+          //ES6
+
+          let otroSaludo2 = () => 'Hola a todos';
+
+          console.log(otroSaludo2());
+
+          // Función con cuerpo.
+
+          // Cuando la función tiene más de una línea (o no devuelve ningún valor) es necesario utilizar las llaves.
+
+          // ES5
+
+          let mayorDeEdad1 = function(nombre, edad) {
+               if (edad >= 18) {
+                    return `${nombre} tienes ${edad} años eres mayor de edad`;
+               } else {
+                    return `${nombre} tienes ${edad} años eres menor de edad`;
+               }
+          }
+
+          console.log(mayorDeEdad1('Jorge', 17));
+
+          // ES6
+
+          let mayorDeEdad2 = (nombre, edad) => {
+               if (edad >= 18) {
+                    return `${nombre} tienes ${edad} años eres mayor de edad`;
+               } else {
+                    return `${nombre} tienes ${edad} años eres menor de edad`;
+               }
+          }
+
+          console.log(mayorDeEdad2('José', 35));
+
+
+          //
+     </script>
+</head>
+
+<body>
+     <script src="http://localhost:35729/livereload.js"></script>
+</body>
+
+</html>
