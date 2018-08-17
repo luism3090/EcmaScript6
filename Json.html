@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Json</title>
+     <script type="text/javascript">
+          let array1 = ['dato1', 'dato2', 'dato3', 'dato4', 'dato5'];
+
+          console.log(array1);
+          console.log(array1[0]);
+
+          array1.push("dato6");
+
+          console.log(array1);
+          console.log(array1[5]);
+
+          console.log("------------------------------------------");
+
+          let personas = [];
+
+          dataPersonas = {
+               nombre: 'Luis',
+               edad: 20,
+               sexo: 'M'
+          }
+
+          console.log(dataPersonas);
+
+          personas.push(dataPersonas);
+
+          console.log(personas);
+
+          console.log("------------------------------------------");
+
+          let medicos = [{
+               image: 'https://photos.doctoralia.com/636657530510442683_1.jpg',
+               nombre: "Dra. Lizette",
+               ape_paterno: "Corona",
+               ape_materno: '',
+               especilidades: [
+                    'Otorrinolaringóloga', 'Neumólogo'
+               ],
+               direcciones: [
+                    "Aguascalientes - Bosques del Prado Norte:Consulta privada",
+                    "Aguascalientes - Obraje:Centenario Hospital Miguel Hidalgo"
+               ],
+               contacto: [{
+                    msjCita: 'Agendar Cita',
+                    mensaje: 'Enviar mensaje',
+                    msjTelefono: 'Ver teléfono'
+               }]
+          }]
+     </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
